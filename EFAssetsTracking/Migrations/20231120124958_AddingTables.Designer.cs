@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFAssetsTracking.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20231117144844_AddingTable")]
-    partial class AddingTable
+    [Migration("20231120124958_AddingTables")]
+    partial class AddingTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

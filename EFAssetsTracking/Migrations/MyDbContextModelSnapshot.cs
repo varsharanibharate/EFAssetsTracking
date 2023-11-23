@@ -36,7 +36,7 @@ namespace EFAssetsTracking.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Electronics");
+                    b.ToTable("Electronics", (string)null);
 
                     b.HasData(
                         new
@@ -88,64 +88,7 @@ namespace EFAssetsTracking.Migrations
 
                     b.HasIndex("ElectronicId");
 
-                    b.ToTable("Gadgets");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Brand = "MacBook",
-                            Currency = "SEK",
-                            ElectronicId = 1,
-                            Model = "SD",
-                            Office = "Sweden",
-                            Price = 300,
-                            PurchaseDate = new DateTime(2023, 3, 22, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Brand = "Samsung",
-                            Currency = "USD",
-                            ElectronicId = 2,
-                            Model = "SD",
-                            Office = "USA",
-                            Price = 100,
-                            PurchaseDate = new DateTime(2022, 7, 2, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Brand = "Motorolla",
-                            Currency = "INR",
-                            ElectronicId = 2,
-                            Model = "HD",
-                            Office = "India",
-                            Price = 3300,
-                            PurchaseDate = new DateTime(2021, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Brand = "Asus",
-                            Currency = "INR",
-                            ElectronicId = 1,
-                            Model = "HD",
-                            Office = "India",
-                            Price = 8000,
-                            PurchaseDate = new DateTime(2023, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Brand = "HP",
-                            Currency = "SEK",
-                            ElectronicId = 1,
-                            Model = "Note",
-                            Office = "Sweden",
-                            Price = 300,
-                            PurchaseDate = new DateTime(2019, 9, 29, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
+                    b.ToTable("Gadgets", (string)null);
                 });
 
             modelBuilder.Entity("EFAssetsTracking.Gadget", b =>
